@@ -10,19 +10,19 @@ Apa saja sentimen yang muncul dari ulasan pengguna terhadap aplikasi JKN Mobile?
 ## Cakupan Proyek
 Proyek ini bertujuan membantu pihak terkait dalam memahami persepsi pengguna aplikasi JKN Mobile dengan pendekatan analisis sentimen menggunakan Natural Language Processing (NLP) dan Machine Learning dalam memprediksi sentimen kalimat/kata.
 
-> Data Collection:
+1. Data Collection:
 Melakukan scraping ulasan pengguna aplikasi JKN Moble dari Google Play Store, mengambil data ulasan hanya berupa komentarnya saja dan maksimal sebanyak 10.000 entry data.
 
-> Data Understanding:
+2. Data Understanding:
 Memahami struktur data hasil scraping, termasuk panjang komentar, distribusi rating, dan waktu ulasan untuk melihat pola data awal.
 
-> Data Cleaning dan Pre-Processing Teks:
+3. Data Cleaning dan Pre-Processing Teks:
 Melakukan pembersihan data seperti menghapus nilai yang kosong, nilai duplikat, dan melakukan pre-processing seperti menghilangkan tanda baca, link, hashtag, menyamakan huruf menjadi kecil semua, melakukan tokenizing (memecah kalimat menjadi teks), melakukan filtering, menerapkan stopwords serta melakukan normalisasi teks untuk keperluan analisis NLP.
 
-> Pelabelan Sentimen:
+4. Pelabelan Sentimen:
 Melakukan import dari kamus positif dan negatif dari github untuk memberikan label pada data yang telah melalui pre-processing. Dimana ini membuat fungsi untuk menentukan skor dalam kata positif, negatif, dan netral sesuai kamus yang sudah didapat.
 
-> Analisis Hasil Label Sentimen dengan Pie Chart dan Wordcloud:
+5. Analisis Hasil Label Sentimen dengan Pie Chart dan Wordcloud:
 Hasil pelabelan menghasilkan sentimen positif sebanyak 1647 ulasan, sentimen negatif 7942 ulasan dan sentimen netral sebanyak 411 ulasan. Berikut ini adalah hasil pie chart presentase sentimen data.
 
 <img width="701" height="525" alt="image" src="https://github.com/user-attachments/assets/69d64155-13a5-4dd2-9a88-a5aa024e224b" />
@@ -53,14 +53,14 @@ Berikut ini menampilkan frekuensi kata-kata yang paling sering muncul dengan bar
 
 Terlihat jika top 20 kata-kata yang paling sering muncul adalah "aplikasi", kemudian "daftar", "verifikasi", hingga "nomor".
 
-> Pemodelan Analisis Sentimen:
+6. Pemodelan Analisis Sentimen:
 Melakukan klasifikasi sentimen ulasan menjadi tiga kategori: positif, negatif, dan netral menggunakan algoritma Naive Bayes, Random Forest, Logistic Regression dan Decision Tree.
 
-1. Data splitting
+a. Data splitting
 Dengan memisahkan fitur x dan label y, menggunakan TF-IDF Vectorizer untuk ekstraksi fitur dengan parameter max_features=200, min_df=17, max_df=0.8.
-2. Pemodelan
+b. Pemodelan
 Membangun model klasifikasi dengan menggunakan Naive Bayes, Random Forest, Logistic Regression dan Decision Tree untuk dibandingkan evaluasi hasilnya.
-3. Evaluasi
+c. Evaluasi
 Model dievaluasi menggunakan akurasi. Hasil evaluasi model menunjukkan:
 
 ```
