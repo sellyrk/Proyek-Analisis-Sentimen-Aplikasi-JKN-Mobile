@@ -1,4 +1,4 @@
-# Proyek-Analisis-Sentimen-Aplikasi-JKN-Mobile
+# Proyek Analisis Sentimen Ulasan Aplikasi JKN Mobile
 About Ini adalah proyek analisis sentimen yang saya buat untuk memenuhi submission awal kelas ML Menengah dari Dicoding (per 8/12/2024)
 
 ## Business Understanding
@@ -57,10 +57,15 @@ Terlihat jika top 20 kata-kata yang paling sering muncul adalah "aplikasi", kemu
 Melakukan klasifikasi sentimen ulasan menjadi tiga kategori: positif, negatif, dan netral menggunakan algoritma Naive Bayes, Random Forest, Logistic Regression dan Decision Tree.
 
 a. Data splitting
+
 Dengan memisahkan fitur x dan label y, menggunakan TF-IDF Vectorizer untuk ekstraksi fitur dengan parameter max_features=200, min_df=17, max_df=0.8.
+
 b. Pemodelan
+
 Membangun model klasifikasi dengan menggunakan Naive Bayes, Random Forest, Logistic Regression dan Decision Tree untuk dibandingkan evaluasi hasilnya.
+
 c. Evaluasi
+
 Model dievaluasi menggunakan akurasi. Hasil evaluasi model menunjukkan:
 
 ```
@@ -72,7 +77,7 @@ Model dievaluasi menggunakan akurasi. Hasil evaluasi model menunjukkan:
 ```
 Sehingga, Logistic Regression menjadi model dengan akurasi tertinggi pada dataset ini.
 
-> Output akhir prediksi kalimat sentimen
+7. Output akhir prediksi kalimat sentimen
 Model dapat digunakan untuk memprediksi sentimen dari kalimat baru secara otomatis. Contoh prediksi:
 ```
 Masukkan kalimat baru:
